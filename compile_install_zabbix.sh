@@ -13,16 +13,16 @@ fi
 ## install some libs and deps.
 if grep -iq "ubuntu" /etc/issue; then
     apt update
-    apt -y install iproute2 ntpdate tcpdump telnet \ 
-    apt -y install traceroute nfs-kernel-server nfs-common lrzsz tree \ 
-    apt -y install openssl libssl-dev libpcre3 libpcre3-dev zlib1g-dev \ 
-    apt -y install ntpdate tcpdump telnet traceroute gcc openssh-server \ 
-    apt -y install lrzsz tree openssl libssl-dev libpcre3 libpcre3-dev   \ 
-    apt -y install zlib1g-dev ntpdate tcpdump telnet traceroute iotop unzip zip make
+    apt -y install iproute2 ntpdate tcpdump telnet 
+    apt -y install traceroute nfs-kernel-server nfs-common lrzsz tree 
+    apt -y install openssl libpcre3 zlib1g-dev 
+    apt -y install tcpdump telnet traceroute gcc openssh-server 
+    apt -y install libssl-dev libpcre3-dev  
+    apt -y install zlib1g-dev iotop unzip zip make
 else
-    yum install -y vim iotop bc gcc gcc-c++ glibc glibc-devel \ 
-    yum install -y pcre  pcre-devel openssl  openssl-devel zip unzip zlib-devel\ 
-    yum install -y net-tools lrzsz tree ntpdate telnet lsof tcpdump wget libevent \ 
+    yum install -y vim iotop bc gcc gcc-c++ glibc glibc-devel  
+    yum install -y pcre  pcre-devel openssl  openssl-devel zip unzip zlib-devel
+    yum install -y net-tools lrzsz tree ntpdate telnet lsof tcpdump wget libevent 
     yum install -y libevent-devel bc systemd-devel bash-completion traceroute 
 fi
 
